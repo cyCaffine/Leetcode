@@ -6,13 +6,13 @@ class Solution {
             return -1;
         }
         
-        int hLen = haystack.length();
-        int nLen = needle.length();
+        int M = haystack.length();
+        int N = needle.length();
         
         // Iterate through haystack
-        for (int i = 0; i <= hLen - nLen; i++) {
+        for (int i = 0; i <= M - N; i++) {
             // Check if needle matches substring of haystack starting at index i
-            if (haystack.substring(i, i + nLen).equals(needle)) {
+            if (haystack.substring(i, i +  N).equals(needle)) {
                 return i; // Found the first occurrence, return index i
             }
         }
